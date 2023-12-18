@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavesh Arts - Sketches & Arts stuidio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Explore the artistic journey of Lavesh, a talented artist specializing in sketches and arts.">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="profile-image"></div>
+            <div class="header-text">
+                <h1>Lavesh Arts stuidio</h1>
+                <p>Sketches & Arts</p>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+
+        <section>
+            <h2>About Me</h2>
+            <p>I am an artist passionate about creating sketches. My artistic journey began in class 7.</p>
+
+            <p>Over the years, I've explored various styles and techniques, finding inspiration in the world around me. From the play of light and shadow to the intricacies of human expression, my work seeks to capture the essence of the subjects I depict.</p>
+
+            <p>While my early sketches were focused on honing my skills and experimenting with different mediums, my recent works reflect a deeper understanding of my own voice as an artist. I am constantly evolving, pushing boundaries, and embracing the continuous learning that comes with a life devoted to art.</p>
+
+            <p>Thank you for joining me on this creative journey. I invite you to explore my portfolio and share in the stories each sketch tells.</p>
+
+
+        </section>
+
+        <h2>My Arts</h2>
+        <div>
+            <p>Naruto Sketche </p>
+            <img class="portfolio-image" src="1.jfif" alt="text">
+        </div>
+        <div>
+            <p> Japanese Boy Sketche </p>
+            <img class="portfolio-image" src="2.jpg">
+            <p> Cute Anime Sketche </p>
+            <img class="portfolio-image" src="3.jpg" alt="text">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact: lavesh202@email.com | Social Media: @gaiwadarts</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.portfolio-image');
+
+            images.forEach(image => {
+                image.addEventListener('click', function () {
+                    toggleFullscreen(this);
+                });
+            });
+
+            function toggleFullscreen(element) {
+                if (!document.fullscreenElement) {
+                    element.requestFullscreen().catch(err => {
+                        console.error('Error attempting to enable fullscreen:', err);
+                    });
+                } else {
+                    document.exitFullscreen();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
